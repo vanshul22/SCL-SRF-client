@@ -1,5 +1,13 @@
-.form-fields {
+.form-fields,
+.center {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 2em 0;
+}
+
+@media only screen and (max-width: 450px) {
+    .form-fields {
+        padding: 2em 0;
+    }
 }

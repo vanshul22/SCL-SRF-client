@@ -1,17 +1,19 @@
 .input-container {
-    width: 280px;
+    width: 20rem;
     position: relative;
-    margin: 0.5em 0;
+    margin: 0.6rem auto;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
 }
 
 .label {
     position: absolute;
     left: 10px;
-    top: 14px;
+    top: 9px;
     transition: all 0.2s;
     padding: 0 2px;
     z-index: 1;
-    color: #b3b3b3;
+    color: #b8a082;
 }
 
 .text-input {
@@ -19,23 +21,24 @@
     width: 100%;
     height: 100%;
     border: 2px solid #2f2c45;
-    background: #272530;
+    background: #272530b5;
     border-radius: 5px;
     font-size: 18px;
     outline: none;
     transition: all 0.3s;
     color: #fff;
+    margin: 0 auto;
 }
 
 .label::before {
     content: "";
-    height: 5px;
+    height: 4px;
     background: #272530;
     position: absolute;
     left: 0px;
     top: 10px;
     width: 100%;
-    z-index: -1;
+    z-index: -10;
 }
 
 .text-input:focus {
@@ -44,17 +47,36 @@
 
 .text-input:focus+.label,
 .filled {
-    top: -10px;
-    color: #7e4ccb;
+    top: -12px;
+    color: #9163d7;
     font-size: 14px;
 }
 
 .text-input::placeholder {
-    font-size: 16px;
+    font-size: 15px;
     opacity: 0;
     transition: all 0.3s;
 }
 
 .text-input:focus::placeholder {
     opacity: 1;
+}
+
+
+@media only screen and (max-width: 450px) {
+    .label {
+        left: 60px;
+        top: 2px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .label {
+        left: 80px;
+        top: 2px;
+    }
+
+    .text-input {
+        font-size: 16px;
+    }
 }

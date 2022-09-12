@@ -1,24 +1,32 @@
-.application-structure{
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Rock+Salt&family=Tangerine&display=swap');
+
+
+
+.application-structure {
     height: 100vh;
-    background: url("../public/IMG/bg.jpg") no-repeat fixed center/cover;
+    width: 50%;
+    padding-top: 1em;
+    /* border: 4px solid black; */
+    font-family: 'Berkshire Swash', cursive;
 }
 
 .box-heading {
     text-align: center;
     position: relative;
-    /* width: 68em; */
+    width: 30em;
     height: 4em;
+    margin: 0em auto;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #000;
-    border-radius: 5px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
 .main-heading {
-    color: #38ed38;
-    font-size: 3rem;
+    color: #ede538;
+    font-size: 2rem;
     position: relative;
     z-index: 1;
 }
@@ -27,14 +35,15 @@
     content: "";
     position: absolute;
     background: #000;
-    inset: 4px;
+    inset: 3px;
+    border-radius: 20px;
 }
 
 .box-heading::before {
     content: "";
     position: absolute;
-    width: 100em;
-    height: 100em;
+    width: 32em;
+    height: 32em;
     background: linear-gradient(#00ccff, #d400d4);
     animation: animate 4s linear infinite;
 }
@@ -46,5 +55,59 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+
+@media only screen and (max-width: 1060px) {
+    .main-heading {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .application-structure {
+        width: 100%;
+    }
+
+    .main-heading {
+        font-size: 1.5rem;
+    }
+
+    .box-heading {
+        width: 23em;
+        height: 3.5em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .main-heading {
+        font-size: 1.3rem;
+    }
+
+    .box-heading {
+        width: 20em;
+        height: 3em;
+    }
+
+    .text-input {
+        padding: 0.5em;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .main-heading {
+        font-size: 1rem;
+    }
+
+    .box-heading {
+        width: 17em;
+        height: 2.5em;
+    }
+
+    .text-input {
+        padding: 0.3em;
+        width: 60%;
     }
 }

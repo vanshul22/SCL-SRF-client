@@ -7,7 +7,6 @@ function App() {
       <div className="box-heading">
         <h1 className='main-heading'> Student Registration Form </h1>
       </div>
-
       <Form />
     </div>
   );

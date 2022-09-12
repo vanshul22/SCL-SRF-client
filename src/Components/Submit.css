@@ -1,11 +1,11 @@
 .form-submit {
-    background: transparent;
-    color: #3bd9d9;
+    background: #4d220042;
+    color: #4d2200;
     font-weight: 400;
     font-size: 24px;
     text-transform: uppercase;
     padding: 8px 36px;
-    border: 2px solid #3bd9d9;
+    border: 2px solid #4d2200;
     border-radius: 32px;
     transform: translate(0);
     overflow: hidden;
@@ -15,16 +15,29 @@
 .form-submit::before {
     content: "";
     position: absolute;
-    background: #3bd9d9;
-    width: 8px;
+    background: #80cfcf;
+    width: 10px;
     top: 0;
     bottom: 0;
     left: -32px;
-    transform: rotate(-16deg);
+    transform: rotate(-18deg);
     filter: blur(6px);
 }
 
 .form-submit:hover::before {
     left: calc(100% + 32px);
-    transition: 0.75s;
+    transition: 1s;
+}
+
+
+@media only screen and (max-width: 1060px) {
+    .form-submit {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .form-submit {
+        font-size: 13px;
+    }
 }
