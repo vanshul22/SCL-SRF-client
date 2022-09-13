@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Rock+Salt&family=Tangerine&display=swap');
 
-.studentregisteration{
+.studentregisteration {
     background: url("../public/IMG/bg.jpg") no-repeat fixed center/cover;
 }
 
-.aboutus{
+.aboutus {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
 }
+
+/* .login {
+    background: url("../public/IMG/Contactus.jpg") no-repeat fixed center/cover;
+} */
 
 .application-structure {
     height: 90.8vh;

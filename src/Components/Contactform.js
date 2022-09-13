@@ -28,12 +28,13 @@ const Contactform = () => {
                 </div>
                 <div className="form-group">
                     <label>Message</label>
-                    <textarea className="form-control my-2" id="message" placeholder="Write you message here..." style={{ "height": "100px" }} name="message" required="required"></textarea>
+                    <textarea className="form-control my-2" id="message" placeholder="Write your message here..." style={{ "height": "100px" }} name="message" required="required"></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary my-2" name="submit">Send message</button>
             </form>
 
             <hr />
+
             <div className="container my-5">
                 <h2><u>Superior CodeLabs</u></h2>
                 <div className="col-md-6">
