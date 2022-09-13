@@ -8,14 +8,15 @@ const Form = () => {
   // Defining use state here...
   const [value, setValue] = useState({ name: "", email: "", mobile: "", cource: "" });
 
+  // using OnSubmit handler here
   const submitHandler = (e) => {
 
     // to stop reloading of page.
-    e.preventDefault();
+    // e.preventDefault();
 
-    const URL = "http://localhost:8080/registeruser";
+    const URL = "http://localhost:8080/";
     // using fetch api here
-    fetch(URL, {
+    fetch(`${URL}registeruser`, {
       method: 'POST',
       headers: {
         "Content-type": "application/json; charset=UTF-8"

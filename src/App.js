@@ -1,14 +1,25 @@
-import Form from './Components/Form';
 import './App.css';
+import Navbar from './Components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Contactus from './Pages/Contactus';
+import Login from './Pages/Login';
+import Signup from './Pages/Contactus';
+
 
 function App() {
   return (
-    <div className='application-structure'>
-      <div className="box-heading">
-        <h1 className='main-heading'> Student Registration Form </h1>
-      </div>
-      <Form />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path='/' element={< Home />}></Route>
+        <Route exact path='/about' element={< About />}></Route>
+        <Route exact path='/contactus' element={< Contactus />}></Route>
+        <Route exact path='/login' element={< Login />}></Route>
+        <Route exact path='/signup' element={< Signup />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
