@@ -14,7 +14,7 @@ const Navbar = () => {
                         <Link className="nav-link active" aria-current="page" to="/"> Home </Link>
                         <Link className="nav-link" to="/aboutus"> About Us </Link>
                         <Link className="nav-link" to="/contactus"> Contact Us </Link>
-                        <Link className="nav-link" to="/studentregisteration"> Student Registeration </Link>
+                        <Link className="nav-link" to="/studentregistration"> Student Registration </Link>
                     </div>
                     <div>
                         <Link to='/login'><button type="button" className="btn btn-info">Login</button></Link>

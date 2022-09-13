@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Home = () => {
+const Home = (props) => {
+    const ok = () => {
+        console.log(props.location)
+    }
     return (
         <div className="home">
-            Home
+            <button onClick={ok}>okk</button>
         </div>
     )
 }
