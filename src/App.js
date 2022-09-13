@@ -6,6 +6,7 @@ import About from './Pages/About';
 import Contactus from './Pages/Contactus';
 import Login from './Pages/Login';
 import Signup from './Pages/Contactus';
+import Studentregisteration from './Pages/Studentregisteration';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/contactus' element={< Contactus />}></Route>
         <Route exact path='/login' element={< Login />}></Route>
         <Route exact path='/signup' element={< Signup />}></Route>
+        <Route exact path='/studentregisteration' element={< Studentregisteration />}></Route>
       </Routes>
     </Router>
   );

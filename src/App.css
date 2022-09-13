@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Rock+Salt&family=Tangerine&display=swap');
 
-
+.home{
+    background: url("../public/IMG/bg.jpg") no-repeat fixed center/cover;
+}
 
 .application-structure {
-    height: 90vh;
+    height: 90.8vh;
     width: 50%;
     padding-top: 1em;
-    /* border: 4px solid black; */
     font-family: 'Berkshire Swash', cursive;
 }
 
