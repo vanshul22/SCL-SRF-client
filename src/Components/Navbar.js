@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from "../assets/IMG/Superiorcodelabs.png"
 
 const Navbar = () => {
     // Getting URL path here
@@ -7,7 +8,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <img src="../assets/IMG/Superiorcodelabs.png" alt="SCL" />
+            <img src={logo} height="35rem" className='rounded ms-2' alt="SCL" />
             <div className="container-fluid">
                 <Link className={`navbar-brand ${location === "/" ? "active" : ""}`} to="/"> Superior CodeLabs </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon" /> </button>
