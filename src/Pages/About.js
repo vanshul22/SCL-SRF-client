@@ -9,10 +9,8 @@ const About = () => {
         The Web development company
         <small className="text-muted"> with effective result oriented work </small>
       </h4>
-      <div style={{"height":"25rem"}}>
-        <Carousal />
-      </div>
-        
+      <div style={{ "height": "25rem" }}> <Carousal /> </div>
+
       <figure className="text-center">
         <blockquote className="blockquote">
           <p className='col-6 mx-auto'>Started in 2015, in a short time we have worked with many clients. Working with dedication is key point of our success and draging the customers ideas and thoughts into the projects is our major role. At every point of contact with customers we are best for providing best in class service with less time of duration.</p>

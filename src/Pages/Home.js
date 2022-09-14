@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Home = (props) => {
-    const ok = () => {
-        console.log(props.location)
+    const homeSubmit = () => {
+        // console.log(props.location)
     }
     return (
         <div className="home">
-            <button onClick={ok}>okk</button>
+            <button onClick={homeSubmit}>okk</button>
         </div>
     )
 }

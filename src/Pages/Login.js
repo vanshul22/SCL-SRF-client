@@ -8,7 +8,7 @@ const Login = () => {
       <div className="mb-3 row">
         <label htmlFor="inputEmail" className="col-sm-2 col-form-label"> Email :</label>
         <div className="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com" />
+          <input type="email" className="form-control" id="inputEmail" placeholder="name@example.com" />
         </div>
       </div>
 

@@ -1,17 +1,17 @@
 import './App.css';
 import Navbar from './Components/Navbar';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Contactus from './Pages/Contactus';
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 import Studentregistration from './Pages/Studentregistration';
+import Footer from './Components/Footer';
 
 
 function App() {
-  const location = useLocation();
-  console.log(location.pathname);
+
   return (
     <>
       <Navbar />
@@ -23,6 +23,7 @@ function App() {
         <Route exact path='/signup' element={< Signup />}></Route>
         <Route exact path='/studentregistration' element={< Studentregistration />}></Route>
       </Routes>
+      <Footer/>
     </>
   );
 }

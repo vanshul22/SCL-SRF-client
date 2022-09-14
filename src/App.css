@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Rock+Salt&family=Tangerine&display=swap');
 
 .studentregisteration {
-    background: url("../public/IMG/bg.jpg") no-repeat fixed center/cover;
+    background: url("./assets/IMG/bg.jpg") no-repeat fixed center/cover;
 }
 
 .aboutus {
@@ -11,12 +11,16 @@
     flex-wrap: wrap;
 }
 
-/* .login {
-    background: url("../public/IMG/Contactus.jpg") no-repeat fixed center/cover;
-} */
+.login{
+    height: 85vh;
+}
+
+.signup{
+    height: 85vh;
+}
 
 .application-structure {
-    height: 90.8vh;
+    height: 90.9vh;
     width: 50%;
     padding-top: 1em;
     font-family: 'Berkshire Swash', cursive;
