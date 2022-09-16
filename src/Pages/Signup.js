@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
-import Signinput from '../Components/Signinput';
+import { useNavigate } from "react-router-dom";
+import SignInput from '../Components/SignInput';
 import Submit from '../Components/Submit';
 
-const Signup = () => {
-  const [value, setValue] = useState({ name: "", email: "", mobile: "", password: "", cpassword: "" });
 
+const Signup = () => {
+
+  // using usenavigate hook...
+  const navigate = useNavigate();
+
+  // creating state from useState...
+  const [value, setValue] = useState({ name: "", email: "", mobile: "", password: "", cpassword: "" });
 
   const signupSubmit = (e) => {
 
     // to stop reloading of page.
-    // e.preventDefault();
+    e.preventDefault();
 
     const URL = "http://localhost:8080/";
     // using fetch api here
@@ -25,6 +31,10 @@ const Signup = () => {
       .then(res => {
         // Handle response 
         console.log('Response: ', res);
+        // Redirecting to login page...
+        setTimeout(() => {
+          navigate("/login");
+        }, 2000);
       })
       .catch(err => {
         // Handle error 
@@ -36,17 +46,17 @@ const Signup = () => {
 
       <h2 className='my-4'>Superior CodeLabs Sign up</h2>
 
-      <Signinput id="name" label="Name:" inputType="text" placeholder='Your Name' value={value} setValue={setValue} />
+      <SignInput id="name" label="Name:" inputType="text" placeholder='Your Name' value={value} setValue={setValue} />
 
-      <Signinput id="email" label="Email:" inputType="email" placeholder="Your Email" value={value} setValue={setValue} />
+      <SignInput id="email" label="Email:" inputType="email" placeholder="Your Email" value={value} setValue={setValue} />
 
-      <Signinput id="mobile" label="Mobile:" inputType="number" placeholder='Mobile Number' value={value} setValue={setValue} />
+      <SignInput id="mobile" label="Mobile:" inputType="number" placeholder='Mobile Number' value={value} setValue={setValue} />
 
-      <Signinput id="password" label="Password:" inputType="password" placeholder='Password' value={value} setValue={setValue} />
+      <SignInput id="password" label="Password:" inputType="password" placeholder='Password' value={value} setValue={setValue} />
 
-      <Signinput id="cpassword" label="Confirm Password:" inputType="password" placeholder='Confirm Password' value={value} setValue={setValue} />
+      <SignInput id="cpassword" label="Confirm Password:" inputType="password" placeholder='Confirm Password' value={value} setValue={setValue} />
 
-      <Submit isDisable={value.password !== value.cpassword | (value.name).length < 3 | (value.email).length < 5 | (value.mobile).length !== 10 | (value.password).length < 8 | (value.password).length > 15} classesName='btn btn-dark mt-4' value='Sign Up'/>
+      <Submit isDisable={value.password !== value.cpassword | (value.name).length < 3 | (value.email).length < 5 | (value.mobile).length !== 10 | (value.password).length < 8 | (value.password).length > 15} classesName='btn btn-dark mt-4' value='Sign Up' />
 
     </form>
   )

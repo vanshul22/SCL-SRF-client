@@ -1,7 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Rock+Salt&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Josefin+Sans&family=Play&display=swap');
 
-.studentregisteration {
-    background: url("./assets/IMG/bg.jpg") no-repeat fixed center/cover;
+.home {}
+
+.img-text {
+    position: relative;
+    font-family: 'Play', sans-serif;
+    text-shadow: 2px 2px 50px white;
+}
+
+.img-text h2 {
+    color: white;
+    font-size: 3.5rem;
+    position: absolute;
+    top: 14rem;
+    right: 3rem;
+
+}
+
+.img-text span {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 18rem;
+    right: 3rem;
+}
+
+@media screen and (max-width: 1001px) {
+    .img-text h2 {
+        font-size: 2.5rem;
+        top: 12rem;
+
+    }
+
+    .img-text span {
+        font-size: 1rem;
+        top: 15rem;
+    }
+
+}
+
+@media screen and (max-width: 751px) {
+    .img-text h2 {
+        font-size: 1.8rem;
+        top: 8rem;
+
+    }
+
+    .img-text span {
+        font-size: 0.7rem;
+        top: 11rem;
+    }
+
+}
+
+@media screen and (max-width: 551px) {
+    .img-text h2 {
+        font-size: 1.3rem;
+        top: 6rem;
+        right: 1.5rem;
+
+    }
+
+    .img-text span {
+        font-size: 0.6rem;
+        top: 8rem;
+        right: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 401px) {
+    .img-text h2 {
+        font-size: 1.1rem;
+        top: 4rem;
+        right: 1rem;
+
+    }
+
+    .img-text span {
+        font-size: 0.5rem;
+        top: 6rem;
+        right: 1rem;
+    }
+
+}
+
+.display-3 {
+    text-shadow: 2px 3px 5px black;
+}
+
+.display-4 {
+    text-shadow: 2px 3px 5px black;
+}
+
+.display-6 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.superiorcodelabslogo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
 }
 
 .aboutus {
@@ -11,11 +112,15 @@
     flex-wrap: wrap;
 }
 
-.login{
+.studentregisteration {
+    background: url("./assets/IMG/bg.jpg") no-repeat fixed center/cover;
+}
+
+.login {
     height: 85vh;
 }
 
-.signup{
+.signup {
     height: 85vh;
 }
 
