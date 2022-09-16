@@ -1,47 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Signinput from '../Components/Signinput';
+import Submit from '../Components/Submit';
 
 const Signup = () => {
+  const [value, setValue] = useState({ name: "", email: "", mobile: "", password: "", cpassword: "" });
+
+
+  const signupSubmit = (e) => {
+
+    // to stop reloading of page.
+    // e.preventDefault();
+
+    const URL = "http://localhost:8080/";
+    // using fetch api here
+    fetch(`${URL}signup`, {
+      method: 'POST',
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      },
+      body: JSON.stringify({
+        name: value.name, email: value.email, mobile: value.mobile, password: value.password
+      })
+    })
+      .then(res => {
+        // Handle response 
+        console.log('Response: ', res);
+      })
+      .catch(err => {
+        // Handle error 
+        console.log('Error message: ', err);
+      });
+  }
   return (
-    <form className='signup container-sm'>
-      
+    <form onSubmit={signupSubmit} className='signup container-sm'>
+
       <h2 className='my-4'>Superior CodeLabs Sign up</h2>
 
-      <div className="mb-3 row">
-        <label htmlFor="signupName" className="col-sm-2 col-form-label"> Name :</label>
-        <div className="col-sm-10">
-          <input type="text" className="form-control" id="signupName" placeholder='Your Name' />
-        </div>
-      </div>
+      <Signinput id="name" label="Name:" inputType="text" placeholder='Your Name' value={value} setValue={setValue} />
 
-      <div className="mb-3 row">
-        <label htmlFor="signupEmail" className="col-sm-2 col-form-label"> Email :</label>
-        <div className="col-sm-10">
-          <input type="email" className="form-control" id="signupEmail" placeholder="Your Email" />
-        </div>
-      </div>
+      <Signinput id="email" label="Email:" inputType="email" placeholder="Your Email" value={value} setValue={setValue} />
 
-      <div className="mb-3 row">
-        <label htmlFor="signupNumber" className="col-sm-2 col-form-label"> Mobile :</label>
-        <div className="col-sm-10">
-          <input type="number" className="form-control" id="signupNumber" placeholder="Mobile Number" />
-        </div>
-      </div>
+      <Signinput id="mobile" label="Mobile:" inputType="number" placeholder='Mobile Number' value={value} setValue={setValue} />
 
-      <div className="mb-3 row">
-        <label htmlFor="signupPassword" className="col-sm-2 col-form-label"> Password :</label>
-        <div className="col-sm-10">
-          <input type="password" className="form-control" id="signupPassword" placeholder='Password' />
-        </div>
-      </div>
+      <Signinput id="password" label="Password:" inputType="password" placeholder='Password' value={value} setValue={setValue} />
 
-      <div className="mb-3 row">
-        <label htmlFor="signupCPassword" className="col-sm-2 col-form-label"> Confirm Password :</label>
-        <div className="col-sm-10">
-          <input type="password" className="form-control" id="signupCPassword" placeholder='Confirm Password' />
-        </div>
-      </div>
+      <Signinput id="cpassword" label="Confirm Password:" inputType="password" placeholder='Confirm Password' value={value} setValue={setValue} />
 
-      <button type="submit" className="btn btn-dark mt-4">Sign Up</button>
+      <Submit isDisable={value.password !== value.cpassword | (value.name).length < 3 | (value.email).length < 5 | (value.mobile).length !== 10 | (value.password).length < 8 | (value.password).length > 15} classesName='btn btn-dark mt-4' value='Sign Up'/>
 
     </form>
   )

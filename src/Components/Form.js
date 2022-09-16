@@ -37,15 +37,18 @@ const Form = () => {
 
   return (
     <form onSubmit={submitHandler}>
+
       <div className='form-fields'>
+
         <Inputs type="text" id="name" label="Name" placeholder="Enter your name" value={value} setValue={setValue} />
         <Inputs type="email" id="email" label="Email" placeholder="Enter your email" value={value} setValue={setValue} />
         <Inputs type="number" id="mobile" label="Number" placeholder="Enter your mobile number" value={value} setValue={setValue} />
-        <Inputs type="tel" id="cource" label="Cource" placeholder="Enter your cource name" value={value} setValue={setValue} />
+        <Inputs type="text" id="cource" label="Cource" placeholder="Enter your cource name" value={value} setValue={setValue} />
+
       </div>
 
       <div className="center">
-        <Submit />
+        <Submit classesName='form-submit' value='Submit' isDisable="" />
       </div>
     </form>
   )

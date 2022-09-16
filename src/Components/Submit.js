@@ -1,10 +1,10 @@
 import React from 'react';
-import "./Submit.css"
+import "./Submit.css";
 
-const Submit = () => {
+const Submit = ({ classesName, value, isDisable }) => {
 
   return (
-    <button type="submit" id="submit" className='form-submit' >Submit</button>
+    <button disabled={isDisable} type="submit" className={`${classesName}`} >{value}</button>
   )
 }
 
