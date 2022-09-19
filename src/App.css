@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Rock+Salt&family=Tangerine&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Josefin+Sans&family=Play&display=swap');
 
-.home {}
+.home {
+    display: block;
+}
 
 .img-text {
     position: relative;
@@ -30,28 +32,24 @@
     .img-text h2 {
         font-size: 2.5rem;
         top: 12rem;
-
     }
 
     .img-text span {
         font-size: 1rem;
         top: 15rem;
     }
-
 }
 
 @media screen and (max-width: 751px) {
     .img-text h2 {
         font-size: 1.8rem;
         top: 8rem;
-
     }
 
     .img-text span {
         font-size: 0.7rem;
         top: 11rem;
     }
-
 }
 
 @media screen and (max-width: 551px) {
@@ -59,7 +57,6 @@
         font-size: 1.3rem;
         top: 6rem;
         right: 1.5rem;
-
     }
 
     .img-text span {
@@ -67,7 +64,6 @@
         top: 8rem;
         right: 1.5rem;
     }
-
 }
 
 @media screen and (max-width: 401px) {
@@ -75,7 +71,6 @@
         font-size: 1.1rem;
         top: 4rem;
         right: 1rem;
-
     }
 
     .img-text span {
@@ -83,7 +78,6 @@
         top: 6rem;
         right: 1rem;
     }
-
 }
 
 .display-3 {
@@ -116,8 +110,100 @@
     background: url("./assets/IMG/bg.jpg") no-repeat fixed center/cover;
 }
 
+.label-log-sign {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.login-section {
+    margin-bottom: 2rem;
+    font-family: 'Play', sans-serif;
+    padding: 0 1rem;
+}
+
+.login-section::before {
+    background: url("./assets/BG/tengyart2.jpg") no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.8;
+}
+
 .login {
-    height: 85vh;
+    height: 77vh;
+    padding: 3rem 4rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+    box-shadow: 1px 2px 40px black;
+}
+
+.login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+@media only screen and (max-width: 1000px) {
+    .login-section::before {
+        height: 110vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .login-section::before {
+        height: 145vh;
+    }
+
+    .login {
+        height: 110vh;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .login-heading {
+        font-size: 3rem !important;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .login-heading {
+        font-size: 2rem !important;
+    }
+}
+
+.login-heading {
+    text-shadow: 4px 3px 7px rgb(65, 62, 62);
+    font-size: 3rem;
+}
+
+.trans-inp-log-sign,
+.trans-inp-log-sign:focus {
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    color: white;
+    text-shadow: 2px 2px 1px rgb(65, 62, 62);
+    box-shadow: none;
+    caret-color: white;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.trans-inp-log-sign::placeholder {
+    color: #ffffff;
+    opacity: 0.6;
 }
 
 .signup {
@@ -178,7 +264,6 @@
         transform: rotate(360deg);
     }
 }
-
 
 @media only screen and (max-width: 1060px) {
     .main-heading {

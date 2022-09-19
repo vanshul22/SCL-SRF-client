@@ -8,9 +8,9 @@ const Signinput = ({ id, label, inputType, placeholder, value, setValue }) => {
     }
     return (
         <div className="mb-3 row">
-            <label htmlFor={id} className="col-sm-2 col-form-label"> {label}</label>
+            <label htmlFor={id} className="col-sm-2 col-form-label label-log-sign"> {label}</label>
             <div className="col-sm-10">
-                <input type={inputType} className="form-control" id={id} placeholder={placeholder} onChange={changingValue} value={value.id} required minLength={3} />
+                <input type={inputType} className="form-control trans-inp-log-sign" id={id} placeholder={placeholder} onChange={changingValue} value={value.id} required minLength={3} />
             </div>
         </div>
     )

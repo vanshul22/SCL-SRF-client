@@ -44,7 +44,7 @@ const Signup = () => {
   return (
     <form onSubmit={signupSubmit} className='signup container-sm'>
 
-      <h2 className='my-4'>Superior CodeLabs Sign up</h2>
+      <h2 className='my-4 user-select-none'>Superior CodeLabs Sign up</h2>
 
       <SignInput id="name" label="Name:" inputType="text" placeholder='Your Name' value={value} setValue={setValue} />
 
