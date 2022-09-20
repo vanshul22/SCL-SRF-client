@@ -8,6 +8,7 @@ import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 import Studentregistration from './Pages/Studentregistration';
 import Footer from './Components/Footer';
+import Welcome from './Pages/Welcome';
 
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
         <Route exact path='/studentregistration' element={< Studentregistration />}></Route>
         <Route exact path='/login' element={< Login />}></Route>
         <Route exact path='/signup' element={< Signup />}></Route>
+        <Route exact path='/welcome' element={< Welcome />}></Route>
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }

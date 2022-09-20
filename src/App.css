@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Rock+Salt&family=Tangerine&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Josefin+Sans&family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
 
 .home {
     display: block;
@@ -107,7 +108,7 @@
 }
 
 .studentregisteration {
-    background: url("./assets/IMG/bg.jpg") no-repeat fixed center/cover;
+    background: url("./assets/IMG/bg.jpg") no-repeat center center/cover;
 }
 
 .label-log-sign {
@@ -207,7 +208,16 @@
 }
 
 .signup {
-    height: 85vh;
+    height: 91vh;
+    background: url("./assets/BG/engin-akyurt.jpg") no-repeat center center/cover;
+    padding: 4rem 8rem;
+}
+.signup h2{
+    color: black;
+    font-size: 3rem;
+    font-family: 'Play', sans-serif;
+    font-weight: bolder;
+    text-shadow: 4px 3px 7px rgb(128, 125, 125);
 }
 
 .application-structure {
@@ -316,4 +326,21 @@
         padding: 0.3em;
         width: 60%;
     }
+}
+
+
+.welcome{
+    background: url("./assets/BG/hand_shake.jpg") no-repeat center center/cover;
+    height: 91vh;
+    color: white;
+    font-family: 'Ms Madi', cursive;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.welcome-heading{
+    font-size: 4rem;
+
 }

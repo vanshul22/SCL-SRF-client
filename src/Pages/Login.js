@@ -25,14 +25,15 @@ const Login = () => {
         email: value.email, password: value.password
       })
     })
-      .then(res => {
+      .then(async res => {
+        // Getting Response here
+        let response_json = await res.json();
         // Handle response 
-        if (res) {
-          // Redirecting to login page...
+        if (response_json) {
           console.log("Password matched...");
-          // After 2 seconds it will go to home page...
           setTimeout(() => {
-            navigate("/");
+            // After 2 seconds it will go to Welcome page...
+            navigate("/welcome");
           }, 2000);
         }
         else console.log("Invalid Password...");
