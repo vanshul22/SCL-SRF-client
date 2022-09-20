@@ -29,14 +29,19 @@ const Login = () => {
         // Getting Response here
         let response_json = await res.json();
         // Handle response 
-        if (response_json) {
-          console.log("Password matched...");
-          setTimeout(() => {
-            // After 2 seconds it will go to Welcome page...
-            navigate("/welcome");
-          }, 2000);
+        if (response_json.isLoggedIn === "password matched") {
+          console.log(response_json.isLoggedIn);
+          alert("Logged in successfully");
+          navigate("/welcome");
         }
-        else console.log("Invalid Password...");
+        else if (response_json.isLoggedIn === "invalid password") {
+          console.log(response_json.isLoggedIn);
+          alert("Invalid password");
+        }
+        else if (response_json.isLoggedIn === "invalid email") {
+          console.log(response_json.isLoggedIn);
+          alert("Email does not matched from any of the registered mail.");
+        }
       })
       .catch(err => {
         // Handle error 
